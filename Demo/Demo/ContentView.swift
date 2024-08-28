@@ -6,11 +6,12 @@
 //  Copyright © 2023-2024 Daniel Saidi. All rights reserved.
 //
 
-import SwiftUI
 import ScrollKit
+import SwiftUI
+
+// MARK: - ContentView
 
 struct ContentView: View {
-
     var body: some View {
         NavigationView {
             List {
@@ -28,7 +29,6 @@ struct ContentView: View {
 }
 
 private extension ContentView {
-
     var linkSection: some View {
         Section(header: Text("Sticky headers")) {
             imageLink
@@ -47,7 +47,6 @@ private extension ContentView {
 }
 
 private extension ContentView {
-
     var colorLink: some View {
         link("paintbrush.pointed.fill", "Color") {
             DemoScreen(headerHeight: 100) {
@@ -87,6 +86,8 @@ private extension ContentView {
         }
     }
 }
+
+// MARK: - ContentView_Previews
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
